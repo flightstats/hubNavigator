@@ -2,8 +2,9 @@ var currentUrl = document.URL;
 var baseUrl = currentUrl.match(/http:\/\/hub-v2[a-z.]+\//g);
 var baseChannel = currentUrl.match(/channel\/\w+/g);
 console.log(baseChannel + " " + baseUrl);
-
+var loadingUrl = chrome.extension.getURL("loadingGif.gif");
 function load(url,parameter){
+        $('#loader').show();
 		$.ajax({
 			url: url+parameter,
 			dataType: "json"
@@ -13,7 +14,9 @@ function load(url,parameter){
 				newUrl = newUrl.match(/http:\/\/hub-v2[a-z.]+([\w\/])+\//g);
 				$('pre').prepend('<h1>'+newUrl[0]+'</h1>');
 				currentUrl = newUrl[0];
-				console.log(currentUrl);
+                $('#loader').hide();
+                console.log(currentUrl);
+
 	});
 }
 
@@ -47,6 +50,8 @@ $("body").prepend("<div id='hubMenu'><ul>");
 $("#hubMenu").append("<li><button id='next'>Next</button></li>");
 $("#hubMenu").append("<li><button id='previous'>Previous</button></li>");
 $("#hubMenu").append("<li><button id='latest'>Latest</button></li>");
+$('#hubMenu').append('<img id="loader" src='+loadingUrl+'>');
+$('#loader').hide();
 $("body").prepend("</ul></div>");
 $("body").prepend("<h1 id='hubUrl'></h1>");
 $("pre").html(syntaxHighlight($("pre").html()));
@@ -68,8 +73,8 @@ $(document).bind('keydown','ctrl+i', function(){
 });
 
 $("#latest").click(function(){
-		load(baseUrl+baseChannel,'latest');
+		load(baseUrl+baseChannel,'/latest');
 });
 $(document).bind('keydown', 'ctrl+l', function(){
-		load(baseUrl+baseChannel,'latest');
+		load(baseUrl+baseChannel,'/latest');
 });
