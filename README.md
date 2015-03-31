@@ -1,7 +1,7 @@
 # hubNavigator
 
 A chrome extension that adds hotkeys, json beautification, and a simple menu for quickly and easily navigating hub messages.
-Current hotkeys are ctrl+i for next, ctrl+o for next, ctrl+i for previous, and ctrl+l for latest.
+Current hotkeys are, ctrl+o for next, ctrl+i for previous, and ctrl+l for latest.
 # How to set-up
 
 Download the repo. Go to the extensions tab on chrome, and make sure developer mode is enabled by checking the box on the top right.
