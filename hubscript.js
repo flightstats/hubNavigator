@@ -15,7 +15,6 @@ function load(url,parameter){
 				currentUrl = newUrl[0];
 				console.log(currentUrl);
 	});
-
 }
 
 function syntaxHighlight(json) {
@@ -51,11 +50,12 @@ $("#hubMenu").append("<li><button id='latest'>Latest</button></li>");
 $("body").prepend("</ul></div>");
 $("body").prepend("<h1 id='hubUrl'></h1>");
 $("pre").html(syntaxHighlight($("pre").html()));
+
 $("#next").click(function(){
 		load(currentUrl,'next');
 });
 
-$(document).bind('keydown', 'ctrl+i', function(){
+$(document).bind('keydown', 'ctrl+o', function(){
 		load(currentUrl,'next');
 });
 
@@ -63,7 +63,7 @@ $("#previous").click(function(){
 		load(currentUrl,'previous');
 });
 
-$(document).bind('keydown','ctrl+o', function(){
+$(document).bind('keydown','ctrl+i', function(){
 		load(currentUrl,'previous');
 });
 
