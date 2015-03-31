@@ -1,6 +1,6 @@
 var currentUrl = document.URL;
 var baseUrl = currentUrl.match(/http:\/\/hub-v2[a-z.]+\//g);
-var baseChannel = currentUrl.match(/channel\/\w+\//g);
+var baseChannel = currentUrl.match(/channel\/\w+/g);
 console.log(baseChannel + " " + baseUrl);
 
 function load(url,parameter){
