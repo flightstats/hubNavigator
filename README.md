@@ -15,3 +15,5 @@ After that, simply navigate to a hub channel, and it'll start workin'
 * Create a settings page with user settable hotkeys
 * Add more commands, like fetching batches, previous 10, previous 100, etc. 
 * Format to work with XML, as well as JSON
+* Make it work with hub v1
+* Add loading indicators
