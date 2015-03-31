@@ -9,6 +9,8 @@ After that, click load un-packed extension, and point the file navigator to the 
 
 After that, simply navigate to a hub channel, and it'll start workin'
 
+note: this may not work with your current json formatter. If it doesn't try disabling your formatter.
+
 # To do
 
 * Externalize HTML from script.
