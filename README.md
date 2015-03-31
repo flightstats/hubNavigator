@@ -19,3 +19,4 @@ note: this may not work with your current json formatter. If it doesn't try disa
 * Format to work with XML, as well as JSON
 * Make it work with hub v1
 * Add loading indicators
+* Fix lots of bugs.
