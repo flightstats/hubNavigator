@@ -18,5 +18,4 @@ note: this may not work with your current json formatter. If it doesn't try disa
 * Add more commands, like fetching batches, previous 10, previous 100, etc. 
 * Format to work with XML, as well as JSON
 * Make it work with hub v1
-* Add loading indicators
 * Fix lots of bugs.
